@@ -39214,12 +39214,10 @@ function requestSearch(query) {
     fetch(url).then(function (response) {
       return response.json();
     }).then(function (response) {
-      // console.log(response);
       if (!(0, _equals2.default)(search.data, response.response.docs)) {
         var _search = response.response.docs.map(function (el) {
           el.published = el.pub_date ? new Date(el.pub_date) : null;
           el.title = el.headline.main;
-          console.log(el.published);
           return el;
         });
         dispatch(updateSearch(_search, true));
@@ -39844,7 +39842,7 @@ var Item = function Item(props) {
       _react2.default.createElement(
         'span',
         { className: 'date' },
-        (0, _date.getDate)(props.pub_date)
+        (0, _date.getDate)(props.published)
       )
     )
   );
