@@ -39216,7 +39216,8 @@ function requestSearch(query) {
     }).then(function (response) {
       if (!(0, _equals2.default)(search.data, response.response.docs)) {
         var _search = response.response.docs.map(function (el) {
-          el.published = el.pub_date ? new Date(el.pub_date) : null;
+          var date = el.pub_date ? el.pub_date.slice(0, el.pub_date.length - 5) : null;
+          el.published = new Date(date);
           el.title = el.headline.main;
           return el;
         });
