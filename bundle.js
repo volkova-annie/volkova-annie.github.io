@@ -10324,7 +10324,7 @@ function getDate(date) {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _react = __webpack_require__(10);
@@ -10336,15 +10336,18 @@ __webpack_require__(618);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Footer = function Footer() {
-    return _react2.default.createElement(
-        'footer',
-        null,
-        _react2.default.createElement(
-            'a',
-            { className: 'footer-link', href: 'https://github.com/volkova-annie', target: '_blank' },
-            '\xA9 Made by Annie Volkova'
-        )
-    );
+  return _react2.default.createElement(
+    'footer',
+    null,
+    _react2.default.createElement(
+      'a',
+      {
+        className: 'footer-link',
+        href: 'https://github.com/volkova-annie/News-Epam',
+        target: '_blank' },
+      '\xA9 Made by Annie Volkova'
+    )
+  );
 };
 
 exports.default = Footer;
@@ -39306,7 +39309,7 @@ var Item = function Item(props) {
       _react2.default.createElement(
         'div',
         { className: 'image-wrapper' },
-        _react2.default.createElement('img', { src: findImage(props.multimedia) })
+        _react2.default.createElement('img', { src: findImage(props.multimedia), alt: 'image from news' })
       ),
       _react2.default.createElement(
         'span',
@@ -39324,6 +39327,7 @@ var Item = function Item(props) {
 
 var NewsList = function NewsList(props) {
   if (props) {
+
     return _react2.default.createElement(
       'ul',
       { className: 'news-list' },
@@ -39545,7 +39549,10 @@ var Post = function (_Component) {
                   href: article.url,
                   target: '_blank',
                   className: 'article__image-wrapper' },
-                _react2.default.createElement('img', { className: 'article__image', src: findImage(article.multimedia) })
+                _react2.default.createElement('img', {
+                  className: 'article__image',
+                  src: findImage(article.multimedia),
+                  alt: 'image from news' })
               ),
               _react2.default.createElement(
                 'div',
@@ -39711,7 +39718,6 @@ var Search = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      console.log(this.props);
       if (this.props.search.requested) {
         return _react2.default.createElement(
           'div',
@@ -39826,7 +39832,7 @@ var Item = function Item(props) {
       _react2.default.createElement(
         'div',
         { className: 'image-wrapper' },
-        _react2.default.createElement('img', { src: findImage(props.multimedia) })
+        _react2.default.createElement('img', { src: findImage(props.multimedia), alt: 'image from news' })
       ),
       _react2.default.createElement(
         'span',
